@@ -1,1 +1,0 @@
-# Generation AI foundation
