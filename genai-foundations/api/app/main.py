@@ -1,8 +1,13 @@
-from langchain_ollama import ChatOllama
+import os
+
+from dotenv  import load_dotenv
+from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, AIMessage
 
-LLM = ChatOllama(
-    model="gemma3:1b",
+load_dotenv()
+
+LLM = init_chat_model(
+    model=os.getenv("MODEL_NAME"),
     temperature=0.7,
 )
 
